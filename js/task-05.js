@@ -5,11 +5,11 @@ const name = document.querySelector("#name-output");
 const nameInput = document.querySelector("#name-input");
 const displayedName = document.querySelector("#name-output");
 
-nameInput.addEventListener("submit", (e) => {
+nameInput.addEventListener("input", (e) => {
   e.preventDefault();
-  if (e.target[0].value === "") {
+  if (e.target.value === "") {
     displayedName.textContent = "Anonymous";
     return;
   }
-  displayedName.textContent = e.target[0].value;
+  displayedName.textContent = e.target.value.trim();
 });

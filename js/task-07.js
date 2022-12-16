@@ -3,8 +3,6 @@
 const slider = document.querySelector("#font-size-control");
 const text = document.querySelector("#text");
 
-slider.addEventListener("click", (e) => {
-  const fontSize = e.target.valueAsNumber;
-  const strFontSize = fontSize.toString();
-  text.style.fontSize = strFontSize + "px";
+slider.addEventListener("input", (e) => {
+  text.style.fontSize = e.target.valueAsNumber.toString() + "px";
 });
